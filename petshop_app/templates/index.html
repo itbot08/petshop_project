@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="main">
+<h2>{{p.title}}</h2>
+	{% for p in items %}
+	<li>
+		<h3>{{p.name}}</h3>
+		<p>{{p.price}}</p>
+		<p class="link-read-item"><a href="/item/{{ p.id }}">Просмотр</a></p>
+		<hr>
+
+	</li>
+	{% endfor %}
+</ul>
+</section>
+
+{% endblock %}
+

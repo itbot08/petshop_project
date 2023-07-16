@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="main">
+
+	<h1>Товары в корзине:</h1>
+	{% for p in items %}
+	<li>
+		<h4>{{p.name}}</h4>
+	</li>
+	{% endfor %}
+
+</section>
+
+{% endblock %}

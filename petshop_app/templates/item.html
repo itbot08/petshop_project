@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div>
+<h1>{{item.name}} - {{item.price}}</h1>
+
+{% if item.photo %}
+<p><img class="img-article-left" src="{{item.photo.url}}"></p>
+{% else %}
+<p><img class="img-article-left" src="{% static 'noimg.jpg' %}"></p>
+{% endif %}
+
+{{item.about}}
+</div>
+
+<p class="link-read-item"><a href="/add_item_to_shopping_cart/?item_id={{ item.id }}">Добавить в корзину</a></p>
+
+{% endblock %}
